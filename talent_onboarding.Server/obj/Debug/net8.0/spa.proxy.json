@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\..\\talent_onboarding.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

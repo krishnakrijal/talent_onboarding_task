@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\talent_onboarding.client",
+    "\\talent_onboarding.Server",
+    "\\talent_onboarding.Server\\Controllers",
+    "\\talent_onboarding.Server\\Dtos",
+    "\\talent_onboarding.Server\\Mappers"
+  ],
+  "PreviewInSolutionExplorer": false
+}

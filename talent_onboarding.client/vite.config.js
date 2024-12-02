@@ -7,14 +7,12 @@ import path from 'path';
 import child_process from 'child_process';
 import { env } from 'process';
 
-const baseFolder =
-    env.APPDATA !== undefined && env.APPDATA !== ''
-        ? `${env.APPDATA}/ASP.NET/https`
-        : `${env.HOME}/.aspnet/https`;
 
+
+const certFolderPath = path.join('C:', 'Users', 'pooja', 'source', 'repos', 'talent_onboarding_task', 'talent_onboarding.client')
 const certificateName = "talent_onboarding.client";
-const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
-const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
+const certFilePath = path.join(certFolderPath, `${certificateName}.pem`);
+const keyFilePath = path.join(certFolderPath, `${certificateName}.key`);
 
 if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
     if (0 !== child_process.spawnSync('dotnet', [
@@ -31,7 +29,7 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
 }
 
 const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
-    env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'https://localhost:7196';
+    env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'https://localhost:7192';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -46,9 +44,25 @@ export default defineConfig({
             '^/weatherforecast': {
                 target,
                 secure: false
-            }
+            },
+            '^/api/customer': {
+                target,
+                secure: false
+            },
+            '^/api/product': {
+                target,
+                secure: false
+            },
+            '^/api/store': {
+                target,
+                secure: false
+            },
+            '^/api/sale': {
+                target,
+                secure: false
+            },
         },
-        port: 5173,
+        port: 5174,
         https: {
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),

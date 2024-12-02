@@ -1,12 +1,340 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\features\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\companydescription.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\components\\companydescription.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\dtos\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\dtos\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\storepage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\pages\\storepage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\storeslice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\features\\storeslice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\customerslice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\features\\customerslice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\customerpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\pages\\customerpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\mappers\\storemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\mappers\\storemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\editrowform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\components\\editrowform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\table.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{55C9B09B-333A-49AB-AC2D-3A568FDCE415}|talent_onboarding.client\\talent_onboarding.client.esproj|solutionrelative:talent_onboarding.client\\src\\components\\table.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|c:\\users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.server\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF70E64-5699-4DB8-A974-00B3CDF46F1E}|talent_onboarding.Server\\talent_onboarding.Server.csproj|solutionrelative:talent_onboarding.server\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\components\\Navbar.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-02T03:33:53.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\main.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\main.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-02T03:31:59.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\App.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-02T02:18:11.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompanyDescription.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\CompanyDescription.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\components\\CompanyDescription.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\CompanyDescription.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\components\\CompanyDescription.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-02T02:19:12.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StorePage.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\StorePage.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\pages\\StorePage.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\StorePage.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\pages\\StorePage.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-02T01:42:13.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StoreMapper.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Mappers\\StoreMapper.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Mappers\\StoreMapper.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Mappers\\StoreMapper.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Mappers\\StoreMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T01:00:36.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Models\\Store.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Models\\Store.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Models\\Store.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Models\\Store.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T00:57:31.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StoreDto.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Dtos\\StoreDto.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Dtos\\StoreDto.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Dtos\\StoreDto.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Dtos\\StoreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T00:56:46.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StoreController.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\StoreController.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Controllers\\StoreController.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\StoreController.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Controllers\\StoreController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA0wIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T00:46:45.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Program.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Program.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T01:40:30.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "storeSlice.js",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\storeSlice.js",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\features\\storeSlice.js",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\storeSlice.js",
+              "RelativeToolTip": "talent_onboarding.client\\src\\features\\storeSlice.js",
+              "ViewState": "AgIAACQAAAAAAAAAAADwvy8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-30T01:38:44.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "store.js",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\store.js",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\features\\store.js",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\store.js",
+              "RelativeToolTip": "talent_onboarding.client\\src\\features\\store.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-30T01:38:36.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditRowForm.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\EditRowForm.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\components\\EditRowForm.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\EditRowForm.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\components\\EditRowForm.jsx",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-30T01:34:06.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAqwI0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T00:39:16.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "talent_onboarding.Server\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.Server\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "talent_onboarding.Server\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T00:38:51.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\vite.config.js",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\vite.config.js",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\vite.config.js",
+              "RelativeToolTip": "talent_onboarding.client\\vite.config.js",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwDsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-29T01:43:23.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "customerSlice.js",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\customerSlice.js",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\features\\customerSlice.js",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\features\\customerSlice.js",
+              "RelativeToolTip": "talent_onboarding.client\\src\\features\\customerSlice.js",
+              "ViewState": "AgIAAFcAAAAAAAAAAADwv2AAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-23T13:11:08.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Table.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\Table.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\components\\Table.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\components\\Table.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\components\\Table.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-20T05:18:49.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerPage.jsx",
+              "DocumentMoniker": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\CustomerPage.jsx",
+              "RelativeDocumentMoniker": "talent_onboarding.client\\src\\pages\\CustomerPage.jsx",
+              "ToolTip": "C:\\Users\\pooja\\source\\repos\\talent_onboarding_task\\talent_onboarding.client\\src\\pages\\CustomerPage.jsx",
+              "RelativeToolTip": "talent_onboarding.client\\src\\pages\\CustomerPage.jsx",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv1wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-21T12:06:42.696Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

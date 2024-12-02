@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {}
+    "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {
+    "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
+        "projectUniqueName": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
         "projectName": "talent_onboarding.Server",
-        "projectPath": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
+        "projectPath": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
         "packagesPath": "C:\\Users\\pooja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\obj\\",
+        "outputPath": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pooja\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +50,26 @@
               "target": "Package",
               "version": "[8.*-*, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -74,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

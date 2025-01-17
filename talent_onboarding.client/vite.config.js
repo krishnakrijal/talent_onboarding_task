@@ -7,14 +7,11 @@ import path from 'path';
 import child_process from 'child_process';
 import { env } from 'process';
 
-const baseFolder =
-    env.APPDATA !== undefined && env.APPDATA !== ''
-        ? `${env.APPDATA}/ASP.NET/https`
-        : `${env.HOME}/.aspnet/https`;
-
+const certFolderPath = path.join('C:', 'Users', 'pooja', 'source', 'repos', 'talent_onboarding_task', 'talent_onboarding.client')
 const certificateName = "talent_onboarding.client";
-const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
-const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
+const certFilePath = path.join(certFolderPath, `${certificateName}.pem`);
+const keyFilePath = path.join(certFolderPath, `${certificateName}.key`);
+
 
 if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
     if (0 !== child_process.spawnSync('dotnet', [
@@ -43,10 +40,22 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '^/weatherforecast': {
+            '^/api/customer': {
                 target,
                 secure: false
-            }
+            },
+            '^/api/product': {
+                target,
+                secure: false
+            },
+            '^/api/store': {
+                target,
+                secure: false
+            },
+            '^/api/sale': {
+                target,
+                secure: false
+            },
         },
         port: 5173,
         https: {

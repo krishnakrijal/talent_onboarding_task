@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "0ylDIy9t5xT7TgYfwXEIKbnrZ5J3WJG0zs2n7jZ/g7s=",
+  "Source": "talent_onboarding.Server",
+  "BasePath": "_content/talent_onboarding.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.client\\talent_onboarding.client.esproj",
+      "Version": 2,
+      "Source": "talent_onboarding.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

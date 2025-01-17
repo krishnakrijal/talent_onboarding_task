@@ -1,33 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {}
+    "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {
+    "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
+        "projectUniqueName": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
         "projectName": "talent_onboarding.Server",
-        "projectPath": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
+        "projectPath": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\talent_onboarding.Server.csproj",
         "packagesPath": "C:\\Users\\pooja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pooja\\OneDrive\\Desktop\\talent_onboarding\\talent_onboarding.Server\\obj\\",
+        "outputPath": "C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding.Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\pooja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -40,15 +43,30 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
               "version": "[8.*-*, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -74,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

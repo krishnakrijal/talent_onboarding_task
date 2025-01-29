@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\talent_onboarding.client",
+    "\\talent_onboarding.Server"
   ],
   "SelectedNode": "\\talent_onboarding.sln",
   "PreviewInSolutionExplorer": false

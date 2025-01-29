@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>False|2025-01-19T06:29:55.4077243Z||;False|2025-01-19T16:28:04.0197594+10:00||;True|2025-01-19T16:20:24.6322971+10:00||;True|2025-01-19T15:57:50.4725112+10:00||;True|2025-01-19T15:30:12.0705384+10:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnectionString">
+      <Value>Server=tcp:talentonboardingtaskserver.database.windows.net,1433%3bInitial Catalog=talentboardingtaskDb%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3bAuthentication="Active Directory Default"%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

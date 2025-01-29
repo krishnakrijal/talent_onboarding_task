@@ -11,11 +11,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Get the connection string from configuration
-var connectionString = builder.Configuration.GetConnectionString("DatabaseConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");
 
 
 builder.Services.AddDbContext<IndustyConnectWeek2Context>(options =>
-     options.UseSqlServer(connectionString));
+     options.UseSqlServer(connectionString, sqlOptions =>
+     {
+         sqlOptions.EnableRetryOnFailure(
+             maxRetryCount: 3,           // Maximum number of retries
+             maxRetryDelay: TimeSpan.FromSeconds(5), // Delay between retries
+             errorNumbersToAdd: null);   // Specify any specific SQL error codes if needed
+     }));
 
 
 var app = builder.Build();

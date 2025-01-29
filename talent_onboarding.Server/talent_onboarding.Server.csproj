@@ -7,6 +7,7 @@
     <SpaRoot>..\talent_onboarding.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
+    <UserSecretsId>2acd0e35-0847-4474-af86-cf69488c643d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

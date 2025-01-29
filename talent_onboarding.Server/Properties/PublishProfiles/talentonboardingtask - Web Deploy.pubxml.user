@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>False|2025-01-18T06:30:34.8254351Z||;False|2025-01-18T01:36:11.8225820+10:00||;False|2025-01-18T01:33:30.9556366+10:00||;False|2025-01-18T01:21:38.7482471+10:00||;False|2025-01-18T01:16:48.6101720+10:00||;False|2025-01-18T01:10:38.3226561+10:00||;False|2025-01-18T01:05:46.5787458+10:00||;False|2025-01-18T00:52:24.5006006+10:00||;True|2025-01-18T00:35:56.0595939+10:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnectionString">
+      <Value>Server=Pooja16%3bInitial Catalog=IndustyConnectWeek2%3bIntegrated Security=True%3bTrustServerCertificate=Yes</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="talent_onboarding.Server.Models.IndustyConnectWeek2Context">
+      <Value>Server=Pooja16%3bInitial Catalog=IndustyConnectWeek2%3bIntegrated Security=True%3bTrustServerCertificate=Yes</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

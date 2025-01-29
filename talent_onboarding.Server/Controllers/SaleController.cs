@@ -25,47 +25,76 @@ namespace talent_onboarding.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SaleDto>>> GetSales()
         {
-            var sales = await _context.Sales
-                .Include(s => s.Customer)
-                .Include(s => s.Product)
-                .Include(s => s.Store)
-                .Select(s => SaleMapper.EntityToDto(s))
-                .ToListAsync();
+            try
+            {
+                var sales = await _context.Sales
+                    .Include(s => s.Customer)
+                    .Include(s => s.Product)
+                    .Include(s => s.Store)
+                    .Select(s => SaleMapper.EntityToDto(s))
+                    .ToListAsync();
 
-            if (sales.Count > 0)
-            {
-                return Ok(sales);
+                if (sales.Count > 0)
+                {
+                    return Ok(sales);
+                }
+                else
+                {
+                    return NotFound("There are no sales at the moment.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound("There are no sales at the moment.");
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching sales: " + ex.Message);
             }
         }
+
 
         // GET: api/Sale/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SaleDto>> GetSale(int id)
         {
-            var sale = await _context.Sales
-                .Include(s => s.Customer)
-                .Include(s => s.Product)
-                .Include(s => s.Store)
-                .FirstOrDefaultAsync(s => s.Id == id);
-
-            if (sale == null)
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
             {
-                return NotFound("Sale not found.");
+                return BadRequest("Invalid sale ID.");
             }
 
-            var saleDto = SaleMapper.EntityToDto(sale);
+            try
+            {
+                var sale = await _context.Sales
+                    .Include(s => s.Customer)
+                    .Include(s => s.Product)
+                    .Include(s => s.Store)
+                    .FirstOrDefaultAsync(s => s.Id == id);
 
-            return Ok(saleDto);
+                if (sale == null)
+                {
+                    return NotFound("Sale not found.");
+                }
+
+                var saleDto = SaleMapper.EntityToDto(sale);
+
+                return Ok(saleDto);
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching the sale: " + ex.Message);
+            }
         }
+
 
         // PUT: api/Sale/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSale(int id, SaleDto saleDto)
         {
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
+            {
+                return BadRequest("Invalid sale ID.");
+            }
             if (id != saleDto.Id)
             {
                 return BadRequest("Sale ID mismatch.");
@@ -85,7 +114,7 @@ namespace talent_onboarding.Server.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating sale: {ex.Message}");
+                
                 return StatusCode(500, "Internal server error.");
             }
 
@@ -96,18 +125,33 @@ namespace talent_onboarding.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<SaleDto>> PostSale(SaleDto saleDto)
         {
-            var sale = SaleMapper.DtoToEntity(saleDto);
+            try
+            {
+                var sale = SaleMapper.DtoToEntity(saleDto);
 
-            _context.Sales.Add(sale);
-            await _context.SaveChangesAsync();
+                _context.Sales.Add(sale);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetSale), new { id = sale.Id }, SaleMapper.EntityToDto(sale));
+                return CreatedAtAction(nameof(GetSale), new { id = sale.Id }, SaleMapper.EntityToDto(sale));
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while saving the sale: " + ex.Message);
+            }
         }
+
 
         // DELETE: api/Sale/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSale(int id)
         {
+
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
+            {
+                return BadRequest("Invalid sale ID.");
+            }
             try
             {
                 var sale = await _context.Sales.FindAsync(id);
@@ -123,12 +167,10 @@ namespace talent_onboarding.Server.Controllers
             }
             catch (DbUpdateException ex)
             {
-                Console.WriteLine($"Database error during deletion: {ex.Message}");
                 return StatusCode(500, $"Database error: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Unexpected error: {ex.Message}");
                 return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }

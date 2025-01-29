@@ -25,40 +25,67 @@ namespace talent_onboarding.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDto>>> GetProducts()
         {
-
-            var products = await _context.Products.Select(s => ProductMapper.EntityToDto(s)).ToListAsync();
-
-            if (products.Count > 0)
+            try
             {
-                return Ok(products);
-            }
-            else
-            {
-                return BadRequest("There are no products at the moment");
-            }
+                var products = await _context.Products.Select(s => ProductMapper.EntityToDto(s)).ToListAsync();
 
+                if (products.Count > 0)
+                {
+                    return Ok(products);
+                }
+                else
+                {
+                    return BadRequest("There are no products at the moment");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching products: " + ex.Message);
+            }
         }
+
         // GET: api/Product/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-
-            if (product == null)
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
             {
-                return NotFound();
+                return BadRequest("Invalid product ID.");
             }
 
-            var productDto = ProductMapper.EntityToDto(product);
+            try
+            {
+                var product = await _context.Products.FindAsync(id);
 
-            return Ok(productDto);
+                if (product == null)
+                {
+                    return NotFound();
+                }
+
+                var productDto = ProductMapper.EntityToDto(product);
+
+                return Ok(productDto);
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching the product: " + ex.Message);
+            }
         }
+
 
         // PUT: api/Product/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, ProductDto product)
         {
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
+            {
+                return BadRequest("Invalid product ID.");
+            }
             if (id != product.Id)
             {
                 return BadRequest("Product ID mismatch");
@@ -83,7 +110,7 @@ namespace talent_onboarding.Server.Controllers
             catch (Exception ex)
             {
                 // Log any other exceptions
-                Console.WriteLine($"Error updating product: {ex.Message}");
+               
                 return StatusCode(500, "Internal server error");
             }
 
@@ -97,43 +124,55 @@ namespace talent_onboarding.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Products.Add(product);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+                return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while saving the product: " + ex.Message);
+            }
         }
+
 
 
         // DELETE: api/Product/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
+            if (id <= 0)
+            {
+                return BadRequest("Invalid product ID.");
+            }
             try
             {
-                Console.WriteLine($"[INFO] Received DELETE request for ID: {id}");
 
                 var product = await _context.Products.FindAsync(id);
                 if (product == null)
                 {
-                    Console.WriteLine($"[INFO] Product with ID {id} not found.");
+                   
                     return NotFound("Product not found");
                 }
 
-                Console.WriteLine($"[INFO] Deleting customer: ID={product.Id}, Name={product.Name}");
+                
                 _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
 
-                Console.WriteLine($"[INFO] Product with ID {id} deleted successfully.");
+                
                 return Ok($"Product with ID {id} deleted successfully.");
             }
             catch (DbUpdateException ex)
             {
-                Console.WriteLine($"[ERROR] Database error during deletion: {ex.Message}");
+               
                 return StatusCode(500, $"Database error: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ERROR] Unexpected error: {ex.Message}");
+               
                 return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }

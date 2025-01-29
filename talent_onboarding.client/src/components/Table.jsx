@@ -1,20 +1,22 @@
-
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const Table = ({ columns, data, keyMapping , onEdit, onDelete, }) => {
+const Table = ({ columns, data, keyMapping, onEdit, onDelete }) => {
     if (!Array.isArray(data)) {
         console.error("Table: `data` prop must be an array", data);
         return <p>Invalid data provided to Table component.</p>;
     }
 
-   
+    const formatDate = (dateStr) => {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString(); // Customize this format as needed
+    };
+
     return (
         <table className="min-w-full border-collapse border border-gray-300">
             <thead className="bg-gray-100">
                 <tr>
-                    {/* Render column headers */}
                     {columns.map((col, index) => (
                         <th key={index} className="border border-gray-300 px-4 py-2 text-left">
                             {col}
@@ -25,12 +27,17 @@ const Table = ({ columns, data, keyMapping , onEdit, onDelete, }) => {
             <tbody>
                 {data.map((row, index) => (
                     <tr key={index} className="hover:bg-gray-50">
-                        {columns.slice(0, -2).map((col) => (
-                            <td key={col} className="border border-gray-300 px-4 py-2">
-                                {row[keyMapping[col] || col] || "N/A"}
-                            </td>
-                        ))}
-                        {/* Edit Button */}
+                        {columns.slice(0, -2).map((col) => {
+                            const field = keyMapping[col];
+                            console.log('Row Data:', row); // Log the row data for debugging
+                            return (
+                                <td key={col} className="border border-gray-300 px-4 py-2">
+                                    {field && col === "Date Sold"
+                                        ? formatDate(row[field]) // Format date separately
+                                        : row[field] || "N/A"}
+                                </td>
+                            );
+                        })}
                         <td className="border border-gray-300 px-4 py-2">
                             <button
                                 onClick={() => onEdit(row)}
@@ -41,7 +48,6 @@ const Table = ({ columns, data, keyMapping , onEdit, onDelete, }) => {
                                 Edit
                             </button>
                         </td>
-                        {/* Delete Button */}
                         <td className="border border-gray-300 px-4 py-2">
                             <button
                                 onClick={() => onDelete(row.id)}
@@ -59,6 +65,7 @@ const Table = ({ columns, data, keyMapping , onEdit, onDelete, }) => {
     );
 };
 
+
 Table.propTypes = {
     columns: PropTypes.arrayOf(PropTypes.string).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -69,4 +76,3 @@ Table.propTypes = {
 };
 
 export default Table;
-

@@ -17,7 +17,7 @@ const ProductPage = () => {
     const [deleteRow, setDeleteRow] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(5);
+    const [itemsPerPage] = useState(10);
 
     const keyMapping = {
         Id: "id",
@@ -30,7 +30,7 @@ const ProductPage = () => {
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
-
+    
     const handleEdit = (row) => {
         setEditRow(row);
     };
@@ -45,8 +45,11 @@ const ProductPage = () => {
     };
 
     const handleAddProduct = (data) => {
-        dispatch(addProduct(data));
+        dispatch(addProduct(data)).then(() => {
+            dispatch(fetchProducts()); // Fetch updated products
+        });
     };
+
 
     const handleDelete = (id) => {
         setDeleteRow(id);
@@ -63,8 +66,11 @@ const ProductPage = () => {
         setDeleteRow(null);
     };
 
+
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const currentProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    console.log("Data passed to the table", currentProducts);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;

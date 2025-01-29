@@ -13,7 +13,8 @@ const AddItemButtonWithModal = ({ title, fields, onSubmit }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        console.log("Form Data on Submit: ", formData); // Check if the correct data is being passed
+        onSubmit(formData); // Pass the form data to the parent
         setIsModalOpen(false); // Close the modal after submission
         setFormData({}); // Reset form data
     };
@@ -27,7 +28,7 @@ const AddItemButtonWithModal = ({ title, fields, onSubmit }) => {
         <>
             <button
                 onClick={() => setIsModalOpen(true)}
-                className=" m-4 px-4 py-2 bg-blue-500 text-white rounded"
+                className="m-4 px-4 py-2 bg-blue-500 text-white rounded"
             >
                 {`New ${title}`}
             </button>
@@ -37,17 +38,37 @@ const AddItemButtonWithModal = ({ title, fields, onSubmit }) => {
                     {fields.map((field) => (
                         <div key={field.name} className="mb-4">
                             <label className="block text-gray-700">{field.label}</label>
-                            <input
-                                type={field.type}
-                                name={field.name}
-                                value={formData[field.name] || ""}
-                                onChange={handleChange}
-                                placeholder={field.placeholder}
-                                className="w-full px-3 py-2 border border-gray-300 rounded"
-                                required={field.required}
-                            />
+                            {field.type === "select" ? (
+                                <select
+                                    name={field.name}
+                                    value={formData[field.name] || ""}
+                                    onChange={handleChange}
+                                    className="w-full px-3 py-2 border border-gray-300 rounded"
+                                    required={field.required}
+                                >
+                                    <option value="" disabled>
+                                        Select {field.label}
+                                    </option>
+                                    {field.options?.map((option) => (
+                                        <option key={option.value} value={option.value}>
+                                            {option.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            ) : (
+                                <input
+                                    type={field.type}
+                                    name={field.name}
+                                    value={formData[field.name] || ""}
+                                    onChange={handleChange}
+                                    placeholder={field.placeholder}
+                                    className="w-full px-3 py-2 border border-gray-300 rounded"
+                                    required={field.required}
+                                />
+                            )}
                         </div>
                     ))}
+
                     <div className="flex justify-end gap-4 mt-4">
                         <button
                             type="button"
@@ -83,20 +104,27 @@ const AddItemButtonWithModal = ({ title, fields, onSubmit }) => {
     );
 };
 
+
+
 // PropTypes for validation
 AddItemButtonWithModal.propTypes = {
-    title: PropTypes.string.isRequired, // Title of the modal (e.g., "Customer")
+    title: PropTypes.string.isRequired,
     fields: PropTypes.arrayOf(
         PropTypes.shape({
-            name: PropTypes.string.isRequired, // Field name (e.g., "name")
-            label: PropTypes.string.isRequired, // Field label (e.g., "Name")
-            type: PropTypes.string.isRequired, // Input type (e.g., "text", "number")
-            placeholder: PropTypes.string, // Placeholder text
-            required: PropTypes.bool, // Whether the field is required
+            name: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            placeholder: PropTypes.string,
+            required: PropTypes.bool,
+            options: PropTypes.arrayOf(
+                PropTypes.shape({
+                    value: PropTypes.string.isRequired,
+                    label: PropTypes.string.isRequired,
+                })
+            ), // Only needed for "select" type
         })
     ).isRequired,
-    onSubmit: PropTypes.func.isRequired, // Function to handle form submission
+    onSubmit: PropTypes.func.isRequired,
 };
 
 export default AddItemButtonWithModal;
-

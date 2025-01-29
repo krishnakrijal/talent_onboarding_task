@@ -26,38 +26,67 @@ namespace talent_onboarding.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<StoreDto>>> GetStores()
         {
-            var stores = await _context.Stores.Select(s => StoreMapper.EntityToDto(s)).ToListAsync();
+            try
+            {
+                var stores = await _context.Stores.Select(s => StoreMapper.EntityToDto(s)).ToListAsync();
 
-            if (stores.Count > 0)
-            {
-                return Ok(stores);
+                if (stores.Count > 0)
+                {
+                    return Ok(stores);
+                }
+                else
+                {
+                    return BadRequest("There are no stores at the moment.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return BadRequest("There are no stores at the moment.");
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching stores: " + ex.Message);
             }
         }
+
 
         // GET: api/Store/5
         [HttpGet("{id}")]
         public async Task<ActionResult<StoreDto>> GetStore(int id)
         {
-            var store = await _context.Stores.FindAsync(id);
-
-            if (store == null)
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
             {
-                return NotFound("Store not found.");
+                return BadRequest("Invalid store ID.");
             }
 
-            var storeDto = StoreMapper.EntityToDto(store);
+            try
+            {
+                var store = await _context.Stores.FindAsync(id);
 
-            return Ok(storeDto);
+                if (store == null)
+                {
+                    return NotFound("Store not found.");
+                }
+
+                var storeDto = StoreMapper.EntityToDto(store);
+
+                return Ok(storeDto);
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while fetching the store: " + ex.Message);
+            }
         }
+
 
         // PUT: api/Store/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStore(int id, StoreDto storeDto)
         {
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
+            {
+                return BadRequest("Invalid store ID.");
+            }
             if (id != storeDto.Id)
             {
                 return BadRequest("Store ID mismatch.");
@@ -77,7 +106,7 @@ namespace talent_onboarding.Server.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating store: {ex.Message}");
+                
                 return StatusCode(500, "Internal server error.");
             }
 
@@ -88,18 +117,31 @@ namespace talent_onboarding.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<StoreDto>> PostStore(StoreDto storeDto)
         {
-            var store = StoreMapper.DtoToEntity(storeDto);
+            try
+            {
+                var store = StoreMapper.DtoToEntity(storeDto);
 
-            _context.Stores.Add(store);
-            await _context.SaveChangesAsync();
+                _context.Stores.Add(store);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetStore), new { id = store.Id }, StoreMapper.EntityToDto(store));
+                return CreatedAtAction(nameof(GetStore), new { id = store.Id }, StoreMapper.EntityToDto(store));
+            }
+            catch (Exception ex)
+            {
+                // Optionally, log the exception here
+                return StatusCode(500, "An error occurred while saving the store: " + ex.Message);
+            }
         }
 
         // DELETE: api/Store/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStore(int id)
         {
+            // Verify that the id has a valid value (assuming it should be a positive integer)
+            if (id <= 0)
+            {
+                return BadRequest("Invalid store ID.");
+            }
             try
             {
                 var store = await _context.Stores.FindAsync(id);
@@ -115,12 +157,12 @@ namespace talent_onboarding.Server.Controllers
             }
             catch (DbUpdateException ex)
             {
-                Console.WriteLine($"Database error during deletion: {ex.Message}");
+                
                 return StatusCode(500, $"Database error: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Unexpected error: {ex.Message}");
+               
                 return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }

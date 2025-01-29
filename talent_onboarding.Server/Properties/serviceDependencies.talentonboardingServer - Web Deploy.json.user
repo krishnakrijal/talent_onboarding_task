@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2025-01-20T05:45:45.0089041Z"
+    }
+  },
+  "parameters": {
+    "talentonboardingServer.resourceGroupLocation": {
+      "Name": "talentonboardingServer.resourceGroupLocation",
+      "Type": null,
+      "Value": "australiaeast"
+    },
+    "talentonboardingServer.resourceGroupName": {
+      "Name": "talentonboardingServer.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "talentonboardingtask"
+    },
+    "talentonboardingServer.resourceName": {
+      "Name": "talentonboardingServer.resourceName",
+      "Type": null,
+      "Value": "talentonboardingServer"
+    },
+    "talentonboardingServer.subscriptionId": {
+      "Name": "talentonboardingServer.subscriptionId",
+      "Type": "subscription",
+      "Value": "646ede68-cbce-442b-8ab1-f247e219e879"
+    }
+  }
+}

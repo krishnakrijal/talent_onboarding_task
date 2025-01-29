@@ -1,38 +1,51 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
 // Async Thunks
-export const fetchCustomers = createAsyncThunk("customers/fetchCustomers", async () => {
-    const response = await axios.get("/api/customer");
-     
-    return response.data;
+export const fetchCustomers = createAsyncThunk("customers/fetchCustomers", async (_, { rejectWithValue }) => {
+    try {
+        const response = await axios.get("/api/customer");
+        return response.data;
+    } catch (error) {
+        return rejectWithValue(error.response.data);
+    }
 });
 
 // Add customer thunk
-export const addCustomer = createAsyncThunk("customers/addCustomer", async (customer) => {
-    const response = await axios.post("/api/customer", customer);
-    return response.data; // The newly added customer
+export const addCustomer = createAsyncThunk("customers/addCustomer", async (customer, { rejectWithValue }) => {
+    try {
+        const response = await axios.post("/api/customer", customer);
+        return response.data; // The newly added customer
+    } catch (error) {
+        return rejectWithValue(error.response.data);
+    }
 });
 
 // Async thunk to edit a customer via the API
 export const editCustomer = createAsyncThunk(
     "customers/editCustomer",
-    async (updatedCustomer) => {
-        const response = await axios.put(`/api/customer/${updatedCustomer.id}`, updatedCustomer);
-        return response.data; // Returns the updated customer
+    async (updatedCustomer, { rejectWithValue }) => {
+        try {
+            const response = await axios.put(`/api/customer/${updatedCustomer.id}`, updatedCustomer);
+
+            return response.data; // Returns the updated customer
+        } catch (error) {
+            return rejectWithValue(error.response.data);
+        }
     }
 );
+
 
 export const deleteCustomer = createAsyncThunk(
     "customers/deleteCustomer",
     async (id, { rejectWithValue }) => {
+
         try {
-            const url = `/api/customer/${id}`;
-            console.log(`Attempting DELETE request to: ${url}`); // Debug log
-            const response = await axios.delete(url);
+            await axios.delete(`/api/customer/${id}`);
             return id;
         } catch (error) {
-            console.error("Error in DELETE request:", error.message); // Log the error
+
             return rejectWithValue(error.message);
         }
     }

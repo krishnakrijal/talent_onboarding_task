@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\pooja\Source\Repos\talent_onboarding_task\talent_onboarding.Server\obj\Release\net9.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\pooja\Source\Repos\talent_onboarding_task\talent_onboarding.Server\obj\Release\net9.0\PubTmp\EFSQLScripts\talent_onboarding.Server.Models.IndustyConnectWeek2Context.sql" />
+</sitemanifest>

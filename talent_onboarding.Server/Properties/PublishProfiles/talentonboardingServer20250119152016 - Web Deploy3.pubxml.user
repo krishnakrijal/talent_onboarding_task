@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJnfnkFL6iUapIsZ8WUquQAAAAAACAAAAAAAQZgAAAAEAACAAAACMPdLTwhc6bQFL6QQlszaC3ADcXg6I1lLwrGzlbUfoXAAAAAAOgAAAAAIAACAAAAD6YLObEIO2iyAdcnLQ1IIaA7v+VgoNZaD08HLRDmduKCAAAABAMMAHsRzrhRIgcbAlzNC/it+TZ0OJdovMv/YhCAFpxEAAAACB6joFV6c81e9d/JZOpNGlep6gR8sjfqMB6QR80cimqOPHOghO84HDnMx6wMJf3Hg46pQI8huzXl4sH1A9UwAe</EncryptedPassword>
+    <History>False|2025-01-20T04:32:32.6233056Z||;False|2025-01-20T13:44:41.9674256+10:00||;False|2025-01-20T13:37:09.6597257+10:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=talentonboardingtaskserver.database.windows.net,1433;Initial Catalog=talentboardingtaskDb_2025-01-19T12-17Z;Authentication=ActiveDirectoryManagedIdentity" />
+    <AzureDBConnectionStrings Include="REDACTED" />
+    <AzureDBConnectionStrings Include="Server=tcp:talentonboardingtaskserver.database.windows.net,1433;Initial Catalog=talentboardingtaskDb;Persist Security Info=False;User ID=Krishna;Password=1904Krivant$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnectionString">
+      <Value>Server=tcp:talentonboardingtaskserver.database.windows.net,1433%3bInitial Catalog=talentboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="talent_onboarding.Server.Models.IndustyConnectWeek2Context">
+      <Value>Server=tcp:talentonboardingtaskserver.database.windows.net,1433%3bInitial Catalog=talentboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

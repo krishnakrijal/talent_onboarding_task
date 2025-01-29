@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>False|2025-01-20T05:04:10.8455523Z||;True|2025-01-20T14:53:11.8050056+10:00||;</History>
+    <LastFailureDetails />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJnfnkFL6iUapIsZ8WUquQAAAAAACAAAAAAAQZgAAAAEAACAAAAAgl6ak9BW5QV1fLmlRmDtwkoxJovf0dhY2fISelr7EagAAAAAOgAAAAAIAACAAAADidGcTMIvHm8WWLDQb9YAtMg7OUlhek0/hho17Nvtj6yAAAABnfLh9KZEAi5zj+gHSoExO5vNxIj2yOvTVgjunhx9d0UAAAABLZ/xYXs0bwK0dP7VXKjNDJjIHLaNoHJJmz35pYPSxTgB6YFGmlwT5SNK2cfD/0VTfjkEPxe+eDn9QnTCQOuxT</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnectionString">
+      <Value>Server=tcp:talentonboardingtaskserver.database.windows.net,1433%3bInitial Catalog=talentboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="talent_onboarding.Server.Models.IndustyConnectWeek2Context">
+      <Value>Server=tcp:talentonboardingtaskserver.database.windows.net,1433%3bInitial Catalog=talentboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

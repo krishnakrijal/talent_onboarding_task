@@ -16,7 +16,7 @@ const StorePage = () => {
     const [deleteRow, setDeleteRow] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(5); // Items per page
+    const [itemsPerPage] = useState(10); // Items per page
 
     const keyMapping = {
         Id: "id",

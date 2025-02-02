@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="talentonboardingServer" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="talentonboardingServer20250130112207" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\pooja\\Source\\Repos\\talent_onboarding_task\\talent_onboarding\.Server\\obj\\Release\\net9\.0\\PubTmp\\Out\\$" />
   </parameter>
   <parameter name="talent_onboarding.Server.Models.IndustyConnectWeek2Context" description="" value="Server=tcp:talentonboardingserver.database.windows.net,1433;Initial Catalog=talentonboardingtaskDb;Persist Security Info=False;User ID=Krishna;Password=1904Krivant$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">

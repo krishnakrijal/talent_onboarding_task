@@ -10,6 +10,7 @@ import EditRowForm from "../components/EditRowForm";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
 import Footer from "../components/Footer";
 import Pagination from "../components/Pagination";
+import { format, parse } from "date-fns"; // Import date-fns for formatting
 
 const SalePage = () => {
     const dispatch = useDispatch();
@@ -53,6 +54,7 @@ const SalePage = () => {
             customerName: customer ? customer.name : "N/A",
             productName: product ? product.name : "N/A",
             storeName: store ? store.name : "N/A",
+            dateSold: sale.dateSold ? format(new Date(sale.dateSold), 'MM/dd/yyyy') : "N/A", // Format dateSold
         };
     });
 
@@ -61,7 +63,9 @@ const SalePage = () => {
     };
 
     const saveEdit = (updatedRow) => {
-        dispatch(editSale(updatedRow));
+        // Parse dateSold back to Date object before dispatching the update
+        const parsedDate = parse(updatedRow.dateSold, 'MM/dd/yyyy', new Date());
+        dispatch(editSale({ ...updatedRow, dateSold: parsedDate }));
         setEditRow(null);
     };
 
@@ -70,7 +74,9 @@ const SalePage = () => {
     };
 
     const handleAddSale = (data) => {
-        dispatch(addSale(data));
+        // Parse dateSold to Date object before dispatching the add
+        const parsedDate = parse(data.dateSold, 'MM/dd/yyyy', new Date());
+        dispatch(addSale({ ...data, dateSold: parsedDate }));
     };
 
     const handleDelete = (id) => {
@@ -104,29 +110,32 @@ const SalePage = () => {
                     title="Sale"
                     fields={[
                         {
+                            name: "dateSold",
+                            label: "Date Sold",
+                            type: "text", // Use text type to format date as MM/DD/YYYY
+                            value: format(new Date(), 'MM/dd/yyyy'), // Default to today's date
+                            placeholder: "mm/dd/yyyy",
+                            required: true,
+                        },
+                        {
                             name: "customerId",
                             label: "Customer",
                             type: "select",
-                            options: customers.map((c) => ({ value: c.id, label: c.name })) || [],
+                            options: customers.map((c) => ({ value: String(c.id), label: c.name })) || [],
                         },
                         {
                             name: "productId",
                             label: "Product",
                             type: "select",
-                            options: products.map((p) => ({ value: p.id, label: p.name })) || [],
+                            options: products.map((p) => ({ value: String(p.id), label: p.name })) || [],
                         },
                         {
                             name: "storeId",
                             label: "Store",
                             type: "select",
-                            options: stores.map((s) => ({ value: s.id, label: s.name })) || [],
+                            options: stores.map((s) => ({ value: String(s.id), label: s.name })) || [],
                         },
-                        {
-                            name: "dateSold",
-                            label: "Date Sold",
-                            type: "date",
-                            required: true,
-                        },
+                       
                     ]}
                     onSubmit={handleAddSale}
                 />
@@ -140,10 +149,33 @@ const SalePage = () => {
                         onCancel={cancelEdit}
                         onChange={setEditRow}
                         fields={[
-                            { name: "customerId", placeholder: "Customer ID" },
-                            { name: "productId", placeholder: "Product ID" },
-                            { name: "storeId", placeholder: "Store ID" },
-                            { name: "dateSold", placeholder: "Date Sold" },
+                            {
+                                name: "dateSold",
+                                label: "Date Sold",
+                                type: "text", // Use text to accept MM/DD/YYYY format
+                                value: editRow.dateSold ? format(new Date(editRow.dateSold), 'MM/dd/yyyy') : '',
+                                placeholder: "mm/dd/yyyy",
+                                required: true,
+                            },
+                            {
+                                name: "customerId",
+                                label: "Customer",
+                                type: "select",
+                                options: customers.map((c) => ({ value: String(c.id), label: c.name })) || [],
+                            },
+                            {
+                                name: "productId",
+                                label: "Product",
+                                type: "select",
+                                options: products.map((p) => ({ value: String(p.id), label: p.name })) || [],
+                            },
+                            {
+                                name: "storeId",
+                                label: "Store",
+                                type: "select",
+                                options: stores.map((s) => ({ value: String(s.id), label: s.name })) || [],
+                            },
+                           
                         ]}
                     />
                 )}

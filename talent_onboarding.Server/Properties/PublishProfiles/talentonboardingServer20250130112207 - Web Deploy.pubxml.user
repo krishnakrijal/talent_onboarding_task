@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2025-02-02T15:04:21.4350100Z||;True|2025-02-02T21:34:46.8891998+10:00||;True|2025-01-30T11:27:49.2316384+10:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnectionString">
+      <Value>Server=tcp:talentonboardingserver.database.windows.net,1433%3bInitial Catalog=talentonboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="talent_onboarding.Server.Models.IndustyConnectWeek2Context">
+      <Value>Server=tcp:talentonboardingserver.database.windows.net,1433%3bInitial Catalog=talentonboardingtaskDb%3bPersist Security Info=False%3bUser ID=Krishna%3bPassword=1904Krivant%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

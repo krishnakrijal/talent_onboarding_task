@@ -4,14 +4,19 @@ import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Table = ({ columns, data, keyMapping, onEdit, onDelete }) => {
     if (!Array.isArray(data)) {
-        console.error("Table: `data` prop must be an array", data);
+       
         return <p>Invalid data provided to Table component.</p>;
     }
 
     const formatDate = (dateStr) => {
         const date = new Date(dateStr);
-        return date.toLocaleDateString(); // Customize this format as needed
+        const day = date.toLocaleDateString("en-GB", { day: "2-digit" });
+        const month = date.toLocaleDateString("en-GB", { month: "short" });
+        const year = date.toLocaleDateString("en-GB", { year: "numeric" });
+
+        return `${day} ${month}, ${year}`;
     };
+
 
     return (
         <table className="min-w-full border-collapse border border-gray-300">
@@ -29,7 +34,7 @@ const Table = ({ columns, data, keyMapping, onEdit, onDelete }) => {
                     <tr key={index} className="hover:bg-gray-50">
                         {columns.slice(0, -2).map((col) => {
                             const field = keyMapping[col];
-                            console.log('Row Data:', row); // Log the row data for debugging
+                           
                             return (
                                 <td key={col} className="border border-gray-300 px-4 py-2">
                                     {field && col === "Date Sold"

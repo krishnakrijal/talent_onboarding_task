@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("talent_onboarding.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ec9128c364ba4111179a1983a2eb4d6c6fa252f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61cd9738ef4ebd0116589bfefa46be532c8a20c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("talent_onboarding.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("talent_onboarding.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

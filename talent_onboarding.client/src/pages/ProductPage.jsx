@@ -70,8 +70,7 @@ const ProductPage = () => {
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const currentProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
-    console.log("Data passed to the table", currentProducts);
-
+   
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
